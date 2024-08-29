@@ -1,6 +1,4 @@
 
 
-l = ['1', '2', '3', '4', '5']
-
-l.pop(0)
-print(l)
+for i in range (9,3):
+    print(i)

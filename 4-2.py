@@ -1,7 +1,7 @@
 from pathlib import Path
 
 path = str(Path(__file__).parent)
-file_path = path + '/4_ex.txt'
+file_path = path + '/4_input.txt'
 
 card_list = []
 card = []
@@ -28,8 +28,6 @@ with open(file_path) as f:
     card_list.pop(0)
     card_list.append(card)
 
-    #print(card_list[0])
-    #print(card_list[0][0])
     for num in called:
         for i in range(len(card_list)):
             for j in range(len(card_list[0])):
