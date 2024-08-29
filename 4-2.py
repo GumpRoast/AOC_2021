@@ -1,7 +1,7 @@
 from pathlib import Path
 
 path = str(Path(__file__).parent)
-file_path = path + '/4_input.txt'
+file_path = path + '/4_ex.txt'
 
 card_list = []
 card = []
