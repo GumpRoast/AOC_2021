@@ -30,42 +30,24 @@ for i in range(len(start)):
     if start[i] == 8:
         fish[8] += 1
 
+fish_ = 0
 new = False
-days = 6
+days = 18
 #print(fish)
 while days > 0:
     print(fish)
-    
-    if fish[0] > 0:
-        new = True
-    if fish[1] > 0:
-        fish[0] = fish[1]
-        fish[1] = 0
-    if fish[2] > 0:
-        fish[1] = fish[2]
-        fish[2] = 0
-    if fish[3] > 0:
-        fish[2] = fish[3]
-        fish[3] = 0
-    if fish[4] > 0:
-        fish[3] = fish[4]
-        fish[4] = 0
-    if fish[5] > 0:
-        fish[4] = fish[5]
-        fish[5] = 0
-    if fish[6] > 0 and new == False:
-        fish[5] = fish[6]
-        fish[6] = 0
-    if fish[7] > 0:
-        fish[6] = fish[7]
-        fish[7] = 0
-    if fish[8] > 0 and new == False:
-        fish[7] = fish[8]
-        fish[8] = 0
-    if new == True:
-        fish[6] += fish[0]
-        fish[8] += fish[0]
-        fish[0] = 0
-        new = False
-    
+    # decrease the fish timer
+    fish_ = fish[0] 
+    fish[0] = fish[1]
+    fish[1] = fish[2]
+    fish[2] = fish[3]
+    fish[3] = fish[4]
+    fish[4] = fish[5]
+    fish[5] = fish[6]
+    fish[6] = fish[7]
+    fish[7] = fish[8]
+    if fish_ > 0:
+        fish[6] += fish_
+        fish[8] += fish_
+
     days -= 1
