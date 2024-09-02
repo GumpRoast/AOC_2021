@@ -9,7 +9,7 @@ with open(file_path) as f:
         start = [int(item) for item in start]
 
 new_fish = 0
-days = 19
+days = 80
 
 while days > 0:
     print(start)

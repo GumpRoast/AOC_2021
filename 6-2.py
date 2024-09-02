@@ -1,7 +1,7 @@
 from pathlib import Path
 
 path = str(Path(__file__).parent)
-file_path = path + '/6_ex.txt'
+file_path = path + '/6_input.txt'
 
 with open(file_path) as f:
     for line in f:
@@ -31,11 +31,10 @@ for i in range(len(start)):
         fish[8] += 1
 
 fish_ = 0
-new = False
-days = 18
+print(fish)
+days = 256
 #print(fish)
 while days > 0:
-    print(fish)
     # decrease the fish timer
     fish_ = fish[0] 
     fish[0] = fish[1]
@@ -46,8 +45,15 @@ while days > 0:
     fish[5] = fish[6]
     fish[6] = fish[7]
     fish[7] = fish[8]
-    if fish_ > 0:
-        fish[6] += fish_
-        fish[8] += fish_
+    # reset 0 timer fish to 6 timer firsh
+    fish[6] += fish_
+    # generate new 8 timer fish based on number of 0 timer fish
+    fish[8] = fish_
 
+    print(fish)
     days -= 1
+sum = 0 
+for item in fish:
+    sum += item
+
+print(sum)
