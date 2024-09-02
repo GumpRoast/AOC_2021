@@ -36,7 +36,6 @@ print()
 
 for i in range(len(x_1)):
     if x_1[i] == x_2[i]:
-<<<<<<< HEAD
         for j in range(y_1[i], y_2[i]):
             grid[j][x_1[i]] += 1
     # straight horizontal line
@@ -45,14 +44,12 @@ for i in range(len(x_1)):
             grid[y_1[i]][j] += 1
 for item in grid:
     print(item)
-=======
-        if y_1 > y_2:
+    if y_1 > y_2:
             
-        print('match')
+    print('match')
 
 # count the number of intersections
 for row in range(len(grid)):
     for col in range(row): 
         if col > 1:
             total += 1
->>>>>>> 986f144 (modified:   5-1.py)
