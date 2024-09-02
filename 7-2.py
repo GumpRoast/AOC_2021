@@ -24,7 +24,8 @@ for i in range(max(positions)):
     tax = 0
     for item in positions:
         fuel += (abs(i - item) + tax)
-        tax += 1
+        for j in range(abs(i - item)):
+            tax += 1
     total.append(fuel)
 #print(total)
 print(min(total))
