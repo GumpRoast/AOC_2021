@@ -18,14 +18,20 @@ print(positions)
 # leading up to the median and from median to last position
 # add up total fuel to get to the median
 #fuel = 0 
-total = []
-for i in range(max(positions)):
-    fuel = 0 
-    tax = 0
-    for item in positions:
-        fuel += (abs(i - item) + tax)
-        for j in range(abs(i - item)):
-            tax += 1
-    total.append(fuel)
-#print(total)
-print(min(total))
+total_fuel = []
+total = 0
+fuel = 0
+tax = 0
+
+fuel = 0
+tax = 0
+
+# for every position
+for position in positions:
+    if position < middle +1:
+        fuel = sum(range((middle + 1) - position))
+        total_fuel.append(fuel)
+    else:
+        fuel = sum(range((position + 1) - middle))
+        total_fuel.append(fuel)
+print(sum(total_fuel))
