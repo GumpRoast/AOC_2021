@@ -4,5 +4,6 @@
 
 #print(sum(range(1)))
 
-for i in range(2):
-    print(i)
+my_list = [10, 20, 30, 5]
+
+print(min(my_list))
