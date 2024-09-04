@@ -4,6 +4,9 @@
 
 #print(sum(range(1)))
 
-my_list = [10, 20, 30, 5]
+string = 'kjkldfsajlkads | jadklfjlka'
 
-print(min(my_list))
+first, second = string.split('|')
+
+print(first)
+print(second)
